@@ -63619,7 +63619,7 @@ MonoBehaviour:
       spirit unlocked'
     ReturnOutput: ???
     FailKey: 2
-    SuccesKey: 0
+    SuccesKey: -1
   CurrentChain:
     Input_Key: 
     Output: 

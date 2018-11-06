@@ -6,14 +6,14 @@ public class TActionChain : TerminalAction
 {
     [Space(5)]
     public List<KeyChain> Chain = new List<KeyChain> ();
-    [HideInInspector] public KeyChain CurrentChain = null;
-    [HideInInspector] public KeyChain LastChain = null;
+    [HideInInspector] public KeyChain CurrentChain;
+    [HideInInspector] public KeyChain LastChain;
 
     public override string LookForKey (string key)
     {
         string output = null;
 
-        if (CurrentChain.Input_Key == null)
+        if (CurrentChain.Input_Key == "")
         {
             CurrentChain = Chain[0];
         }
@@ -39,7 +39,7 @@ public class TActionChain : TerminalAction
         else
         {
             //Fail on finding key
-            if (LastChain != null)
+            if (LastChain.Input_Key != "")
             {
                 CurrentChain = Chain[CurrentChain.FailKey];
                 return "? syntax error" + "\n" + LastChain.ReturnOutput;

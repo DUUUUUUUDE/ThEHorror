@@ -20,6 +20,12 @@ public class PlayerGadgets : MonoBehaviour {
     [Space(10)]
 
 
+    #region GUN
+
+
+
+    #endregion
+
     #region DOT SCAN
 
     float DotScanRecoverTime;

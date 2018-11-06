@@ -66,7 +66,6 @@ public class Terminal : MonoBehaviour {
             {
                 string ActionKey = input.Remove(input.IndexOf('.'), input.Length - input.IndexOf('.'));
 
-
                 foreach (TActionInfo action in InfoActions)
                 {
                     if (action.TriggerKey == ActionKey)
