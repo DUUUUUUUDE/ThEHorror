@@ -74,10 +74,23 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\PlayerGun.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\Terminal.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalAction.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\KeyChain.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\KeyInfo.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\TActionChain.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\TActionInfo.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalInteract.cs" />
+    <Compile Include="Assets\Scripts\NPCs\DialogueTree.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerGadgets.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerInteract.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerUI.cs" />
+    <Compile Include="Assets\Scripts\Spirit.cs" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
@@ -97,6 +110,7 @@
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
+    <None Include="Assets\Materials &amp; Shaders\Shaders\InvertColorUI.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
     <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
@@ -104,16 +118,16 @@
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -314,19 +328,19 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.10f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/Horror/The Horror/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>C:/Users/Admin/Desktop/Projects/TheHorrorProject/ThEHorror/The Horror/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Admin/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

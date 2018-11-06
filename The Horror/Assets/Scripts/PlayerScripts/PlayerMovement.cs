@@ -5,14 +5,17 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     #region PUBLIC VARIABLES
+    [Space(10)]
     public float _MaxJumpHeight;
     public float _MinJumpHeight;
-    public float _TimeToJumpMaxHeight;
+    public float _TimeToMaxHeight;
+    [Space(10)]
     public float _ChangeDirAir;
     public float _ChangeDirGround;
+    [Space(10)]
     public float _NormalMoveSpeed;
     public float _RunMoveSpeed;
-    public float _MouseSensitivity;
+    [Space(10)]
     #endregion
 
     #region VARS JUMP
@@ -48,25 +51,30 @@ public class PlayerMovement : MonoBehaviour {
     protected float     _ChangeDirectionTimeGround;
     protected float     _VerticalAxis;
     protected float     _HorizontalAxis;
-    protected float     _XAxisClamp = 0.0f;
     CharacterController _CharacterController;
-    protected Camera    _CharacterCamera;
+    PlayerManager       _Manager;
     #endregion
 
     protected void Start()
     {
-
-        _NormalGravity = -(2 * _MaxJumpHeight) / Mathf.Pow(_TimeToJumpMaxHeight, 2);
+        _NormalGravity = -(2 * _MaxJumpHeight) / Mathf.Pow(_TimeToMaxHeight, 2);
         _Gravity = _NormalGravity;
-        _MaxJumpVelocity = Mathf.Abs(_Gravity) * _TimeToJumpMaxHeight;
+        _MaxJumpVelocity = Mathf.Abs(_Gravity) * _TimeToMaxHeight;
         _MinJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(_Gravity) + _MaxJumpHeight);
         _ChangeDirectionTimeAir = _ChangeDirAir;
         _ChangeDirectionTimeGround = _ChangeDirGround;
         _MoveSpeed = _NormalMoveSpeed;
         _CharacterController = GetComponent<CharacterController>();
-        _CharacterCamera = GetComponentInChildren<Camera>();
+
+        _Manager = GetComponentInParent<PlayerManager>();
     }
 
+    public void Update()
+    {
+        NormalMovement();
+    }
+
+    #region Change MoveSpeed
     public virtual void Walk()
     {
         _MoveSpeed = _NormalMoveSpeed;
@@ -74,9 +82,12 @@ public class PlayerMovement : MonoBehaviour {
 
     public virtual void Run()
     {
-        _MoveSpeed = _RunMoveSpeed;
+        if (_Manager.CurrentSpirit == null)
+            _MoveSpeed = _RunMoveSpeed;
     }
+    #endregion
 
+    #region Jump
     public virtual void StartJump()
     {
         if (CanJump)    //Jump
@@ -88,7 +99,6 @@ public class PlayerMovement : MonoBehaviour {
                 OnSlope = false;
         }
     }
-    //JUMP END
     public virtual void EndJump()
     {
         if (_Velocity.y > _MinJumpVelocity)
@@ -96,6 +106,7 @@ public class PlayerMovement : MonoBehaviour {
             _Velocity.y = _MinJumpVelocity;
         }
     }
+    #endregion
 
     public void SetMoveDirection(Vector3 Direction)
     {
@@ -103,11 +114,7 @@ public class PlayerMovement : MonoBehaviour {
         _Move.z = Direction.z;
     }
 
-    public void Update()
-    {
-        RotateCamera();
-        NormalMovement();
-    }
+    
 
     public virtual void NormalMovement()
     {
@@ -156,38 +163,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
 
-    void RotateCamera()
-    {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
-
-        float rotAmountX = mouseX * _MouseSensitivity;
-        float rotAmountY = mouseY * _MouseSensitivity;
-
-        _XAxisClamp -= rotAmountY;
-
-        Vector3 targetRotCam = _CharacterCamera.transform.rotation.eulerAngles;
-        Vector3 targetRotBody = transform.rotation.eulerAngles;
-
-        targetRotCam.x -= rotAmountY;
-        targetRotCam.z = 0;
-        targetRotBody.y += rotAmountX;
-
-        if (_XAxisClamp > 90)
-        {
-            _XAxisClamp = 90;
-            targetRotCam.x = 90;
-        }
-        else if (_XAxisClamp < -90)
-        {
-            _XAxisClamp = -90;
-            targetRotCam.x = 270;
-        }
-
-        _CharacterCamera.transform.rotation = Quaternion.Euler(new Vector3(targetRotCam.x, targetRotCam.y, transform.rotation.eulerAngles.z));
-        transform.rotation = Quaternion.Euler(new Vector3(targetRotBody.x, targetRotBody.y, transform.rotation.eulerAngles.z));
-
-    }
+    
 
     #region SLOPES
     void ChecKSlope()
