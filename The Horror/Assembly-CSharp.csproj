@@ -77,10 +77,11 @@
     <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
     <Compile Include="Assets\Scripts\Interactables\Terminal\Terminal.cs" />
     <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalAction.cs" />
-    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\KeyChain.cs" />
-    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\KeyInfo.cs" />
-    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\TActionChain.cs" />
-    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\TActionInfo.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\Chain\KeyChain.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\Chain\TAChainSpirit.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\Chain\TActionChain.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\Info\KeyInfo.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalActions\Info\TActionInfo.cs" />
     <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalInteract.cs" />
     <Compile Include="Assets\Scripts\NPCs\DialogueTree.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCamera.cs" />
@@ -90,7 +91,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerUI.cs" />
-    <Compile Include="Assets\Scripts\Spirit.cs" />
+    <Compile Include="Assets\Scripts\Spirits\Spirit.cs" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />

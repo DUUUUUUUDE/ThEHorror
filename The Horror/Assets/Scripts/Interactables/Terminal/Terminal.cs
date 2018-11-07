@@ -119,7 +119,7 @@ public class Terminal : MonoBehaviour {
     {
         if (!OnCoroutine)
         {
-            PlayerManager.Instace.ChangeState(PlayerManager.PlayerStates.OnTerminal);
+            PlayerManager.Instace.ChangeState(PlayerManager.States.OnTerminal);
 
             PlayerManager.Instace.CurrentTerminal = this;
 
@@ -138,7 +138,7 @@ public class Terminal : MonoBehaviour {
     {
         if (!OnCoroutine)
         {
-            PlayerManager.Instace.ChangeState(PlayerManager.PlayerStates.Free);
+            PlayerManager.Instace.ChangeState(PlayerManager.States.Free);
 
             PlayerManager.Instace.CurrentTerminal = null;
 

@@ -26899,12 +26899,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218665803}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103, y: -31, z: 32}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -100, y: -31, z: 32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1221183698}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &227477395
 GameObject:
@@ -27286,12 +27286,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227477395}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -110, y: -31, z: 84}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -107, y: -31, z: 84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1221183698}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &298082289
 Mesh:
@@ -37420,7 +37420,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-454404
+  m_Name: pb_Mesh12664
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -38940,7 +38940,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-458758
+  m_Name: pb_Mesh12650
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -50783,7 +50783,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-457060
+  m_Name: pb_Mesh13172
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -53616,6 +53616,11 @@ Transform:
   - {fileID: 1118783105}
   - {fileID: 1912572591}
   - {fileID: 735626210}
+  - {fileID: 1336122170}
+  - {fileID: 227477401}
+  - {fileID: 1664099904}
+  - {fileID: 2015640700}
+  - {fileID: 218665809}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -57637,12 +57642,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1336122164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87, y: -31, z: 84}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -84, y: -31, z: 84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1221183698}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1370998825
 Mesh:
@@ -63290,19 +63295,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1664099898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -133, y: -31, z: 84}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -130, y: -31, z: 84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1221183698}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1665465906
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-443278
+  m_Name: pb_Mesh12918
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -63547,8 +63552,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1696566756}
-  - component: {fileID: 1696566758}
   - component: {fileID: 1696566757}
+  - component: {fileID: 1696566758}
   m_Layer: 9
   m_Name: StartActions
   m_TagString: Untagged
@@ -63580,8 +63585,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f6a67da2d4f4445b3edef35f3c09af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerKey: xxx
-  InfoNotes: []
+  TriggerKey: terminal
+  InfoNotes:
+  - Input_Key: spirit
+    Output: 'to take spirit use
+
+      spirit command'
+  - Input_Key: info
+    Output: 'this teminal stores spirits
+
+      take them at hearts content'
 --- !u!114 &1696566758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63590,35 +63603,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1696566755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36cc111cfeca455448fbbaab94d9cf3c, type: 3}
+  m_Script: {fileID: 11500000, guid: e8cb22313b7bb674091b71c5c0df2cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerKey: spirit
+  TriggerKey: spiritHolder
   Chain:
-  - Input_Key: open
-    Output: 'opening spirit node...
-
-      spirit node open!
-
-      waiting for input'
-    ReturnOutput: waiting for input
+  - Input_Key: spirit
+    Output: Spirit released
+    ReturnOutput: 
     FailKey: 0
-    SuccesKey: 1
-  - Input_Key: unlock
-    Output: 'key needed for unlocking
-
-      waiting for key'
-    ReturnOutput: waiting for key
-    FailKey: 1
-    SuccesKey: 2
-  - Input_Key: new_era
-    Output: 'checking key...
-
-      key accepted!
-
-      spirit unlocked'
-    ReturnOutput: ???
-    FailKey: 2
     SuccesKey: -1
   CurrentChain:
     Input_Key: 
@@ -63632,6 +63625,7 @@ MonoBehaviour:
     ReturnOutput: 
     FailKey: 0
     SuccesKey: 0
+  ActionSpirit: {fileID: 11400000, guid: ff3358a4531df174ea67f52f1d906e85, type: 2}
 --- !u!1 &1702415452
 GameObject:
   m_ObjectHideFlags: 0
@@ -78132,7 +78126,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-455162
+  m_Name: pb_Mesh13004
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -91458,12 +91452,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015640694}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103, y: -31, z: 52}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -100, y: -31, z: 52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1221183698}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2019407291
 GameObject:

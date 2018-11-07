@@ -22,13 +22,13 @@ public class PlayerInput : MonoBehaviour {
         // INPUT depending on PlayerState
         switch (PlayerManager._State)
         {
-            case PlayerManager.PlayerStates.Free:
+            case PlayerManager.States.Free:
                 FreeInput();
                 break;
-            case PlayerManager.PlayerStates.OnTerminal:
+            case PlayerManager.States.OnTerminal:
                 TerminalInput();
                 break;
-            case PlayerManager.PlayerStates.OnMenu:
+            case PlayerManager.States.OnMenu:
                 break;
         }
     }

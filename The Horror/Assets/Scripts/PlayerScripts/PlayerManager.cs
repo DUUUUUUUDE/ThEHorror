@@ -49,30 +49,30 @@ public class PlayerManager : MonoBehaviour {
     }
 
     #region STATES
-    public enum PlayerStates
+    public enum States
     {
         Free,
         OnTerminal,
         OnMenu
     }
 
-    public static PlayerStates _State;
+    public static States _State;
 
     //Change State
-    public void ChangeState (PlayerStates newState)
+    public void ChangeState (States newState)
     {
         switch (newState)
         {
 
-            case PlayerStates.Free:
+            case States.Free:
                 FreeState();
                 break;
 
-            case PlayerStates.OnTerminal:
+            case States.OnTerminal:
                 OnTerminalState();
                 break;
 
-            case PlayerStates.OnMenu:
+            case States.OnMenu:
                 break;
 
         }
@@ -81,7 +81,7 @@ public class PlayerManager : MonoBehaviour {
     //STATE SETUPS
     void FreeState ()
     {
-        _State = PlayerStates.Free;
+        _State = States.Free;
 
         _CameraMovement.enabled = true;
         _Movement.enabled = true;
@@ -91,7 +91,7 @@ public class PlayerManager : MonoBehaviour {
     }
     void OnTerminalState()
     {
-        _State = PlayerStates.OnTerminal;
+        _State = States.OnTerminal;
 
         _CameraMovement.enabled = false;
         _Movement.enabled = false;
@@ -101,7 +101,7 @@ public class PlayerManager : MonoBehaviour {
     }
     void OnMenuState()
     {
-        _State = PlayerStates.OnMenu;
+        _State = States.OnMenu;
 
         _CameraMovement.enabled = false;
         _Movement.enabled = false;

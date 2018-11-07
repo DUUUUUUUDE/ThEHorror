@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
     [Space(10)]
     public float _NormalMoveSpeed;
     public float _RunMoveSpeed;
+    public float _AimSpeed;
     [Space(10)]
     #endregion
 
@@ -44,15 +45,19 @@ public class PlayerMovement : MonoBehaviour {
     protected float     _NormalGravity;
     protected float     _MaxJumpVelocity;
     protected float     _MinJumpVelocity;
+
     protected float     _VelocityGroundSmoothingX;
     protected float     _VelocityGroundSmoothingZ;
     protected float     _VelocityAirSmoothing;
     protected float     _ChangeDirectionTimeAir;
     protected float     _ChangeDirectionTimeGround;
+
     protected float     _VerticalAxis;
     protected float     _HorizontalAxis;
+
     CharacterController _CharacterController;
     PlayerManager       _Manager;
+
     #endregion
 
     protected void Start()
@@ -75,15 +80,19 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     #region Change MoveSpeed
-    public virtual void Walk()
+    public void Walk()
     {
         _MoveSpeed = _NormalMoveSpeed;
     }
 
-    public virtual void Run()
+    public void Run()
     {
-        if (_Manager.CurrentSpirit == null)
+        if (_Manager.CurrentSpirit != null && !PlayerManager._Gadgets.Aiming)
             _MoveSpeed = _RunMoveSpeed;
+    }
+    public void Aim ()
+    {
+        _MoveSpeed = _AimSpeed;
     }
     #endregion
 

@@ -13,22 +13,64 @@ public class PlayerGadgets : MonoBehaviour {
     public int DotScanMaxAmmo;
     [Tooltip("The multyplier on the recovery time of the scan")]
     public float SpiritMod;
-    [Space(10)]
 
+    [Space(10)]
     public GameObject WayPoint;
     public float WayPointCost;
-    [Space(10)]
 
+    [Space (10)]
+    [HideInInspector] public bool Aiming;
+    public float GunTimeToCharge;
+    public float GunDamageMax;
+    public float GunDamageMin;
 
     #region GUN
 
+    float GunTimer;
+    float GunDamage;
 
+    public void StartAim ()
+    {
+        PlayerManager._Movement.Aim ();
+        Aiming = true;
+    }
+
+    public void StopAim ()
+    {
+        PlayerManager._Movement.Walk ();
+        Aiming = false;
+        ResetAim();
+    }
+
+    void Aim ()
+    {
+        if (GunDamage < GunDamageMax)
+        {
+            GunTimer += Time.deltaTime;
+            GunDamage = (GunDamageMax - GunDamageMin) * (GunTimer/ GunTimeToCharge);
+        }
+    }
+
+    void ResetAim()
+    {
+        GunTimer = 0;
+        GunDamage = 0;
+    }
+
+    public void Shoot ()
+    {
+        if (Aiming)
+        {
+            ResetAim();
+            Debug.Log(GunDamage);
+        }
+    }
 
     #endregion
 
     #region DOT SCAN
 
-    float DotScanRecoverTime;
+    float   DotScanRecoverTime;
     float   DotScanTimer;
     int     DotScanAmmo;
 
