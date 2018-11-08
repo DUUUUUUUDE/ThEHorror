@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 114657472527882734}
   - component: {fileID: 114145474775040376}
   - component: {fileID: 114783726544719286}
+  - component: {fileID: 114423876962125074}
   m_Layer: 0
   m_Name: PlayerHolder
   m_TagString: Untagged
@@ -472,6 +473,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _CharacterCamera: {fileID: 1611743719098622}
+  _SensitivityNormal: 2
+  _SensitivityAim: 1.25
   _MouseSensitivity: 2
 --- !u!114 &114309457501453992
 MonoBehaviour:
@@ -527,6 +530,19 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114423876962125074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750785433445792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2146fd84db90bd4c99792c9dc1c231c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpiritImage: {fileID: 114881431845666958}
+  InteractText: {fileID: 114669227594678540}
 --- !u!114 &114572575870048170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -543,7 +559,11 @@ MonoBehaviour:
   DotScanMaxAmmo: 20
   SpiritMod: 1.5
   WayPoint: {fileID: 1601206265024202, guid: bb76d3fbeb6a093429391dc8b70bda4d, type: 2}
-  WayPointCost: 1
+  WayPointCost: 5
+  Aiming: 0
+  GunTimeToCharge: 3
+  GunDamageMax: 5
+  GunDamageMin: 1
 --- !u!114 &114591717045627410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -562,6 +582,7 @@ MonoBehaviour:
   _ChangeDirGround: 0
   _NormalMoveSpeed: 7
   _RunMoveSpeed: 14
+  _AimSpeed: 3
   CanJump: 0
   Jump: 0
   _MoveSpeed: 0
@@ -663,14 +684,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   InteractDist: 2
-  InteractText: {fileID: 114669227594678540}
 --- !u!114 &114881431845666958
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1076774945284076}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -5557,10 +5577,10 @@ RectTransform:
   m_Father: {fileID: 224322866471189768}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.02764069, y: 0.8794578}
-  m_AnchorMax: {x: 0.069640696, y: 0.952}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0}
-  m_SizeDelta: {x: -0.000038147, y: 0.099999905}
+  m_AnchorMin: {x: 0.02764069, y: 0.84200007}
+  m_AnchorMax: {x: 0.09083287, y: 0.952}
+  m_AnchoredPosition: {x: -0.34002686, y: 0.5200043}
+  m_SizeDelta: {x: -0.6700001, y: -0.9399996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224687396967469310
 RectTransform:

@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Spirits/Base")]
 public class Spirit : ScriptableObject {
 
-    public float TotalEnergy = 100;
-    public float TotalTimeToRecover = 30;
+    public float TotalEnergy;
+    public float TotalTimeToRecover;
 
     float Energy;
-    float Timer;
+    float TimeMultiplier;
 
     // USE SPIRIT
 	public void Drain (float cost)
@@ -18,14 +18,15 @@ public class Spirit : ScriptableObject {
         if (Energy < 0)
         {
             PlayerManager.Instace.CurrentSpirit = null;
+            PlayerManager._UI.HideSpirit ();
         }
     }
 
     //SPIRIT UPDATE
     public void Recover()
     {
-        Timer += Time.deltaTime;
-        Energy = TotalEnergy * (Timer / TotalTimeToRecover);
+        Energy = Mathf.MoveTowards(Energy, TotalEnergy, TimeMultiplier * Time.deltaTime);
+        PlayerManager._UI.RefreshSpirit(Energy / TotalEnergy);
     }
 
     //INTERACT WITH SPIRIT
@@ -37,6 +38,11 @@ public class Spirit : ScriptableObject {
     //GIVE PLAYER SPIRIT
     public void SetUp ()
     {
+        Energy = TotalEnergy;
+
+        TimeMultiplier = TotalTimeToRecover / 60;
+
         PlayerManager.Instace.CurrentSpirit = this;
+        PlayerManager._UI.ShowSpirit();
     }
 }

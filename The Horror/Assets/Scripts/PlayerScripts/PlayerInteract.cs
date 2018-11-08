@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour {
 
@@ -9,7 +8,6 @@ public class PlayerInteract : MonoBehaviour {
 
     public LayerMask    InteractLayer;
     public float        InteractDist;
-    public Text         InteractText;
 
     public void Interact ()
     {
@@ -26,8 +24,7 @@ public class PlayerInteract : MonoBehaviour {
             {
                 CurrentInteractable = hit.collider.GetComponent<Interactable>();
                 CurrentInteractable.OnEnter();
-                InteractText.enabled = true;
-                InteractText.text = CurrentInteractable.InteractMessage;
+                PlayerManager._UI.ShowInteractText(CurrentInteractable.InteractMessage);
 
             }
         }
@@ -36,7 +33,7 @@ public class PlayerInteract : MonoBehaviour {
             if (CurrentInteractable)
             {
                 CurrentInteractable.OnExit();
-                InteractText.enabled = false;
+                PlayerManager._UI.HideInteractText();
                 CurrentInteractable = null;
             }
         }

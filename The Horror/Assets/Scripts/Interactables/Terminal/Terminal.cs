@@ -80,7 +80,6 @@ public class Terminal : MonoBehaviour {
             foreach (TActionChain action in ChainActions)
             {
                 NewConsoleOutput = action.LookForKey(input);
-                Debug.Log(input);
             }
         }
 

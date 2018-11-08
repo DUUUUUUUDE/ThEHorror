@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour {
 
     public GameObject _CharacterCamera;
+    public float _SensitivityNormal;
+    public float _SensitivityAim;
     public float _MouseSensitivity;
 
     protected float _XAxisClamp = 0.0f;
@@ -12,6 +14,16 @@ public class PlayerCamera : MonoBehaviour {
 	void Update ()
     {
         RotateCamera();
+    }
+
+    public void NormalSensitivity ()
+    {
+        _MouseSensitivity = _SensitivityNormal;
+    }
+
+    public void AimSensitivity ()
+    {
+        _MouseSensitivity = _SensitivityAim;
     }
 
     void RotateCamera()

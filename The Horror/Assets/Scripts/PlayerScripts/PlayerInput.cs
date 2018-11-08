@@ -43,12 +43,20 @@ public class PlayerInput : MonoBehaviour {
         {
             PlayerManager._Interact.Interact();
         }
-
-        // Dot Scan
+        // GUN // SCAN
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            PlayerManager._Gadgets.DotScan();
+            PlayerManager._Gadgets.Shoot ();
         }
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            PlayerManager._Gadgets.StartAim();
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            PlayerManager._Gadgets.StopAim();
+        }
+
         // Waypoint
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {

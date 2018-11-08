@@ -9,6 +9,7 @@ public class TAChainSpirit : TActionChain {
     protected override void Action()
     {
         PlayerManager.Instace.CurrentSpirit = ActionSpirit;
+        PlayerManager.Instace.CurrentSpirit.SetUp();
     }
 
 }

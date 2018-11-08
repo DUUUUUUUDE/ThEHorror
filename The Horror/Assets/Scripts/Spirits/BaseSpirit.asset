@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5999185df982604f9ce58216d194e8b, type: 3}
   m_Name: BaseSpirit
   m_EditorClassIdentifier: 
-  TotalEnergy: 100
-  TotalTimeToRecover: 30
+  TotalEnergy: 30
+  TotalTimeToRecover: 60

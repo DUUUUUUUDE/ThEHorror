@@ -24,6 +24,20 @@ public class PlayerGadgets : MonoBehaviour {
     public float GunDamageMax;
     public float GunDamageMin;
 
+    public void Shoot()
+    {
+        if (Aiming)
+        {
+            Debug.Log(GunDamage);
+            ResetAim();
+        }
+        else
+        {
+            ShootDotScan();
+        }
+    }
+
+
     #region GUN
 
     float GunTimer;
@@ -31,15 +45,24 @@ public class PlayerGadgets : MonoBehaviour {
 
     public void StartAim ()
     {
-        PlayerManager._Movement.Aim ();
-        Aiming = true;
+        if (PlayerManager.Instace.CurrentSpirit)
+        {
+            PlayerManager._Movement.Aim();
+            Aiming = true;
+            ResetAim();
+            PlayerManager._CameraMovement.AimSensitivity();
+        }
     }
 
     public void StopAim ()
     {
-        PlayerManager._Movement.Walk ();
-        Aiming = false;
-        ResetAim();
+        if (Aiming)
+        {
+            PlayerManager._Movement.Walk();
+            Aiming = false;
+            ResetAim();
+            PlayerManager._CameraMovement.NormalSensitivity();
+        }
     }
 
     void Aim ()
@@ -47,24 +70,16 @@ public class PlayerGadgets : MonoBehaviour {
         if (GunDamage < GunDamageMax)
         {
             GunTimer += Time.deltaTime;
-            GunDamage = (GunDamageMax - GunDamageMin) * (GunTimer/ GunTimeToCharge);
+            GunDamage = GunDamageMin + (GunDamageMax - GunDamageMin) * (GunTimer/ GunTimeToCharge);
         }
     }
 
     void ResetAim()
     {
         GunTimer = 0;
-        GunDamage = 0;
+        GunDamage = GunDamageMin;
     }
-
-    public void Shoot ()
-    {
-        if (Aiming)
-        {
-            ResetAim();
-            Debug.Log(GunDamage);
-        }
-    }
+    
 
     #endregion
 
@@ -73,12 +88,6 @@ public class PlayerGadgets : MonoBehaviour {
     float   DotScanRecoverTime;
     float   DotScanTimer;
     int     DotScanAmmo;
-
-    //Execute
-    public void DotScan()
-    {
-        ShootDotScan();
-    }
     
     //Shoot
     void ShootDotScan()
@@ -147,6 +156,9 @@ public class PlayerGadgets : MonoBehaviour {
 
         if (Manager.CurrentSpirit)
             Manager.CurrentSpirit.Recover();
+
+        if (Aiming)
+            Aim();
     }
 
 }
