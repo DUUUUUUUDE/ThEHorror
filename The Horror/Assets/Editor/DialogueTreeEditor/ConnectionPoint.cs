@@ -42,8 +42,8 @@ public class ConnectionPoint
         OnClickConnectionPoint = onClickConnectionPoint;
     }
 
-    //Draw connection point
-    public void Draw()
+    //Place connection point
+    public void Place()
     {
         //node position Y
         rect.y = ParentNode.rect.y + (ParentNode.rect.height * 0.5f) - rect.height * 0.5f;

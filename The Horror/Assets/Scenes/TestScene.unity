@@ -62246,6 +62246,25 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114432237392543418, guid: 47d36a0e20c6a844b933a63572b184dc,
+        type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432237392543418, guid: 47d36a0e20c6a844b933a63572b184dc,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432237392543418, guid: 47d36a0e20c6a844b933a63572b184dc,
+        type: 2}
+      propertyPath: m_Text
+      value: "Lorem ipsum dolor sit amet, ut oblique repudiandae sea. Te sed veniam
+        deserunt constituam. Mea id causae bonorum, eu omnes altera mea. Ius in stet
+        duis etiam, usu etiam ponderum delicatissimi no. Sea eius accusam invidunt
+        id, graeco nominavi scaevola eos no. In eos ignota lucilius platonem, affert
+        impetus oportere eu his.\r \n\r"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d36a0e20c6a844b933a63572b184dc, type: 2}
   m_IsPrefabAsset: 0

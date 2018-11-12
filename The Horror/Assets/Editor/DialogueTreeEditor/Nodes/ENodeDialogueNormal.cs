@@ -35,4 +35,6 @@ public class ENodeDialogueNormal : ENodeBase
         #endregion
     }
 
+   
+
 }

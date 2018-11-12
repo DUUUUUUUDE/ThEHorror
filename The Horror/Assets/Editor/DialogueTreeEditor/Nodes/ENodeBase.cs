@@ -18,7 +18,7 @@ public abstract class ENodeBase
     public float NodeHight;
     public float VerticalOffset = 10;
     public float HorizontalOffset = 10;
-    public float TopExtraOffset = 10;
+    public float BoxTitleOffset = 10;
 
     public float TextAreaHeight = 100;
 
@@ -51,20 +51,20 @@ public abstract class ENodeBase
     //Draw Node
     protected virtual void DrawNodeHolder()
     {
-        inPoint.Draw();
-        outPoint.Draw();
+        inPoint.Place();
+        outPoint.Place();
         GUI.Box(rect, Title);
     }
 
     //Give DialogueText RECT
     protected virtual Rect RectTextArea ()
     {
-        NodeHight += TextAreaHeight + VerticalOffset + TopExtraOffset;
+        NodeHight += TextAreaHeight + VerticalOffset + BoxTitleOffset;
 
         return new Rect
             (
             rect.x + HorizontalOffset,
-            rect.y + VerticalOffset + TopExtraOffset,
+            rect.y + VerticalOffset + BoxTitleOffset,
             rect.size.x - HorizontalOffset * 2,
             TextAreaHeight
             );

@@ -63,6 +63,7 @@ public class DialogueTreeEditor : EditorWindow
     {
         GenericMenu genericMenu = new GenericMenu();
         genericMenu.AddItem(new GUIContent("Add Normal Node"), false, () => OnClickAddNormalDialogueNode(mousePosition));
+        genericMenu.AddItem(new GUIContent("Add Option Node"), false, () => OnClickAddOptionDialogueNode(mousePosition));
 
         genericMenu.ShowAsContext();
     }
@@ -76,6 +77,16 @@ public class DialogueTreeEditor : EditorWindow
         }
 
         Nodes.Add(new ENodeDialogueNormal(mousePosition, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+    }
+
+    private void OnClickAddOptionDialogueNode(Vector2 mousePosition)
+    {
+        if (Nodes == null)
+        {
+            Nodes = new List<ENodeBase>();
+        }
+
+        Nodes.Add(new ENodeDialogueOptions(mousePosition, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
     }
 
     #region NODES
