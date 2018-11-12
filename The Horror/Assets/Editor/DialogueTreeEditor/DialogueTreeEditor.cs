@@ -86,7 +86,7 @@ public class DialogueTreeEditor : EditorWindow
             Nodes = new List<ENodeBase>();
         }
 
-        Nodes.Add(new ENodeDialogueOptions(mousePosition, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+        Nodes.Add(new ENodeDialogueOptions(mousePosition, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, RemoveOptionConnections));
     }
 
     #region NODES
@@ -129,6 +129,27 @@ public class DialogueTreeEditor : EditorWindow
         }
 
         Nodes.Remove(node);
+    }
+    //Remove option connections
+    protected void RemoveOptionConnections(ConnectionPoint point)
+    {
+        if (connections != null)
+        {
+            List<Connection> connectionsToRemove = new List<Connection>();
+
+            for (int i = 0; i < connections.Count; i++)
+            {
+                if (connections[i].outPoint == point)
+                {
+                    connectionsToRemove.Add(connections[i]);
+                }
+            }
+
+            for (int i = 0; i < connectionsToRemove.Count; i++)
+            {
+                connections.Remove(connectionsToRemove[i]);
+            }
+        }
     }
 
     //Draw nodes

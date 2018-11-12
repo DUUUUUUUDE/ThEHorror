@@ -43,20 +43,20 @@ public class ConnectionPoint
     }
 
     //Place connection point
-    public void Place()
+    public void Place(Rect buttonRect)
     {
         //node position Y
-        rect.y = ParentNode.rect.y + (ParentNode.rect.height * 0.5f) - rect.height * 0.5f;
+        rect.y = buttonRect.y + (buttonRect.height * 0.5f) - rect.height * 0.5f;
 
         //node position X
         switch (Type)
         {
             case ConnectionPointType.In:
-                rect.x = ParentNode.rect.x - rect.width;
+                rect.x = buttonRect.x - rect.width;
                 break;
 
             case ConnectionPointType.Out:
-                rect.x = ParentNode.rect.x + ParentNode.rect.width;
+                rect.x = buttonRect.x + buttonRect.width;
                 break;
         }
 

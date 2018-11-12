@@ -14,7 +14,7 @@ public abstract class ENodeBase
     public Rect rect;
     public string Title = "Base Node";
 
-    public float NodeWidth = 250;
+    public float NodeWidth = 200;
     public float NodeHight;
     public float VerticalOffset = 10;
     public float HorizontalOffset = 10;
@@ -51,15 +51,15 @@ public abstract class ENodeBase
     //Draw Node
     protected virtual void DrawNodeHolder()
     {
-        inPoint.Place();
-        outPoint.Place();
+        inPoint.Place(rect);
+        outPoint.Place(rect);
         GUI.Box(rect, Title);
     }
 
     //Give DialogueText RECT
     protected virtual Rect RectTextArea ()
     {
-        NodeHight += TextAreaHeight + VerticalOffset + BoxTitleOffset;
+        NodeHight += TextAreaHeight + VerticalOffset * 2 + BoxTitleOffset;
 
         return new Rect
             (
@@ -76,7 +76,7 @@ public abstract class ENodeBase
     #region OTHER STUFF
 
     //Node internal RightCLick menu
-    private void ProcessContextMenu()
+    protected void ProcessContextMenu()
     {
         GenericMenu genericMenu = new GenericMenu();
         genericMenu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
@@ -99,7 +99,7 @@ public abstract class ENodeBase
     }
 
     //PlayerInput if true redraw editor window
-    public bool ProcessEvents(Event e)
+    public virtual bool ProcessEvents(Event e)
     {
         switch (e.type)
         {

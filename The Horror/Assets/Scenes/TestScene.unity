@@ -62079,22 +62079,22 @@ Prefab:
     - target: {fileID: 224076482944464892, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 136.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224758853566124932, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224751947956184224, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224668797860501648, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224758853566124932, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
@@ -62263,7 +62263,8 @@ Prefab:
         deserunt constituam. Mea id causae bonorum, eu omnes altera mea. Ius in stet
         duis etiam, usu etiam ponderum delicatissimi no. Sea eius accusam invidunt
         id, graeco nominavi scaevola eos no. In eos ignota lucilius platonem, affert
-        impetus oportere eu his.\r \n\r"
+        impetus oportere eu his.\r Lorem ipsum dolor sit amet, ut oblique repudiandae
+        sea. Te sed\n\r"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d36a0e20c6a844b933a63572b184dc, type: 2}
