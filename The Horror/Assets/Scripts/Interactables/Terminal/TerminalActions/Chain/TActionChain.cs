@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TActionChain : TerminalAction
 {
@@ -8,6 +9,8 @@ public class TActionChain : TerminalAction
     public List<KeyChain> Chain = new List<KeyChain> ();
     [HideInInspector] public KeyChain CurrentChain;
     [HideInInspector] public KeyChain LastChain;
+    [Space(5)]
+    public UnityEvent TerminalEvent;
 
     public override string LookForKey (string key)
     {
@@ -50,6 +53,11 @@ public class TActionChain : TerminalAction
             }
         }
 
+    }
+
+    protected virtual void Action()
+    {
+        TerminalEvent.Invoke();
     }
 
 }

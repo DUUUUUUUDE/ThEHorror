@@ -48,7 +48,22 @@ public class PlayerManager : MonoBehaviour {
         FreeState();
     }
 
+    public void SetUpSpirit (Spirit spirit)
+    {
+        CurrentSpirit = spirit;
+        OnSpirit = true;
+    }
+    public void EraseSpirit ()
+    {
+        CurrentSpirit = null;
+        OnSpirit = false;
+    }
+
     #region STATES
+
+    public bool OnSpirit;
+    public bool OnConversation;
+
     public enum States
     {
         Free,
@@ -109,6 +124,7 @@ public class PlayerManager : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
+    
 
     #endregion
 }

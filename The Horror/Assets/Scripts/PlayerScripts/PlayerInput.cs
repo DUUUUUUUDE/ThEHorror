@@ -38,7 +38,6 @@ public class PlayerInput : MonoBehaviour {
     void FreeInput ()
     {
         #region GADGETS
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             PlayerManager._Interact.Interact();
@@ -64,9 +63,7 @@ public class PlayerInput : MonoBehaviour {
         }
         #endregion
 
-
         #region MOVEMENT
-
         //MOVEMENT VECTOR
         _MovementForward = GetForwardMovement();
         PlayerManager._Movement.SetMoveDirection(_MovementForward);
@@ -92,6 +89,7 @@ public class PlayerInput : MonoBehaviour {
             PlayerManager._Movement.Walk();
         }
         #endregion
+
     }
 
     // GET 2D MOVEMENT

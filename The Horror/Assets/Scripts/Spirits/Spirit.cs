@@ -38,6 +38,9 @@ public class Spirit : ScriptableObject {
     //GIVE PLAYER SPIRIT
     public void SetUp ()
     {
+
+        PlayerManager.Instace.CurrentSpirit = this;
+
         Energy = TotalEnergy;
 
         TimeMultiplier = TotalTimeToRecover / 60;

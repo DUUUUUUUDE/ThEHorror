@@ -14,11 +14,5 @@ public class TerminalAction : MonoBehaviour
         return null;
 
     }
-
-    protected virtual void Action ()
-    {
-
-    }
-
 }
 	
