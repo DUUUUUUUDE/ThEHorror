@@ -1,10 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
+using System.Linq;
+using System.IO;
 using UnityEngine;
 using UnityEditor;
 
 public class DialogueTreeEditor : EditorWindow
  {
+
+    private float menuBarHeight = 20f;
+    private Rect menuBar;
+
 
     //List of nodes in window
     private List<ENodeBase> Nodes = new List<ENodeBase>();
@@ -45,6 +53,9 @@ public class DialogueTreeEditor : EditorWindow
         //Grid
         DrawGrid(25, 0.2f, Color.gray);
         DrawGrid(100, 0.4f, Color.gray);
+
+        //Menu
+        DrawMenuBar();
 
         //Draw Nodes and connections
         DrawNodes();
@@ -377,6 +388,84 @@ public class DialogueTreeEditor : EditorWindow
     }
 
 
+    private void DrawMenuBar()
+    {
+        menuBar = new Rect(0, 0, position.width, menuBarHeight);
 
+        GUILayout.BeginArea(menuBar, EditorStyles.toolbar);
+        GUILayout.BeginHorizontal();
 
+        if (GUILayout.Button(new GUIContent("Save"), EditorStyles.toolbarButton, GUILayout.Width(35)))
+        {
+            Save();
+        }
+        GUILayout.Space(5);
+        if (GUILayout.Button(new GUIContent("Load"), EditorStyles.toolbarButton, GUILayout.Width(35)))
+        {
+            Load();
+        }
+
+        GUILayout.EndHorizontal();
+        GUILayout.EndArea();
+    }
+
+    private void Save()
+    {
+        XMLOp.Serialize(Nodes, "Assets/Resources/nodes.xml");
+        XMLOp.Serialize(connections, "Assets/Resources/connections.xml");
+    }
+
+    private void Load()
+    {
+        var nodesDeserialized = XMLOp.Deserialize<List<ENodeBase>>("Assets/Resources/nodes.xml");
+        var connectionsDeserialized = XMLOp.Deserialize<List<Connection>>("Assets/Resources/connections.xml");
+
+        Nodes = new List<ENodeBase>();
+        connections = new List<Connection>();
+
+        foreach (var nodeDeserialized in nodesDeserialized)
+        {
+            /*
+            Nodes.Add(new ENodeDialogueOptions(
+                nodeDeserialized.rect.position,
+                inPointStyle,
+                outPointStyle,
+                OnClickInPoint,
+                OnClickOutPoint,
+                OnClickRemoveNode,
+                nodeDeserialized.inPoint.id,
+                nodeDeserialized.outPoint.id
+                )
+
+            );
+            */
+        }
+
+        foreach (var connectionDeserialized in connectionsDeserialized)
+        {
+            var inPoint = Nodes.First(n => n.inPoint.id == connectionDeserialized.inPoint.id).inPoint;
+            var outPoint = Nodes.First(n => n.outPoint.id == connectionDeserialized.outPoint.id).outPoint;
+            connections.Add(new Connection(inPoint, outPoint, OnClickRemoveConnection));
+        }
+    }
+}
+
+public class XMLOp
+{
+    public static void Serialize(object item, string path)
+    {
+        XmlSerializer serializer = new XmlSerializer(item.GetType());
+        StreamWriter writer = new StreamWriter(path);
+        serializer.Serialize(writer.BaseStream, item);
+        writer.Close();
+    }
+
+    public static T Deserialize<T>(string path)
+    {
+        XmlSerializer serializer = new XmlSerializer(typeof(T));
+        StreamReader reader = new StreamReader(path);
+        T deserialized = (T)serializer.Deserialize(reader.BaseStream);
+        reader.Close();
+        return deserialized;
+    }
 }

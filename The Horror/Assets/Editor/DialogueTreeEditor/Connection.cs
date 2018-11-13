@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEditor;
 
@@ -7,9 +9,10 @@ public class Connection
 {
     public ConnectionPoint inPoint;
     public ConnectionPoint outPoint;
-    public System.Action<Connection> OnClickRemoveConnection;
+    [XmlIgnore] public System.Action<Connection> OnClickRemoveConnection;
 
     //Constructor
+    public Connection() { }
     public Connection(ConnectionPoint inPoint, ConnectionPoint outPoint, System.Action<Connection> OnClickRemoveConnection)
     {
         this.inPoint = inPoint;

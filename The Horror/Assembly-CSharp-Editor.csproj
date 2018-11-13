@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\BuiltInResourcesWindow.cs" />
     <Compile Include="Assets\Editor\DialogueTreeEditor\Connection.cs" />
     <Compile Include="Assets\Editor\DialogueTreeEditor\ConnectionPoint.cs" />
     <Compile Include="Assets\Editor\DialogueTreeEditor\DialogueTreeEditor.cs" />
@@ -69,11 +68,6 @@
     <Compile Include="Assets\Editor\DialogueTreeEditor\Nodes\ENodeDialogueNormal.cs" />
     <Compile Include="Assets\Editor\DialogueTreeEditor\Nodes\NodeDialogueEvent.cs" />
     <Compile Include="Assets\Editor\DialogueTreeEditor\Nodes\NodeDialogueOptions.cs" />
-    <Compile Include="Assets\Node_Editor_Framework-develop\Editor\Node_Editor\CanvasInspector.cs" />
-    <Compile Include="Assets\Node_Editor_Framework-develop\Editor\Node_Editor\NodeEditorWindow.cs" />
-    <Compile Include="Assets\Node_Editor_Framework-develop\Editor\Node_Editor\NodeInspector.cs" />
-    <Compile Include="Assets\Node_Editor_Framework-develop\Editor\Node_Editor\RTCanvasCalculatorEditor.cs" />
-    <Compile Include="Assets\Node_Editor_Framework-develop\Editor\Node_Editor\RTNodeEditorInspector.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_AboutWindow.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_UpdateAvailable.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_UpdateCheck.cs" />

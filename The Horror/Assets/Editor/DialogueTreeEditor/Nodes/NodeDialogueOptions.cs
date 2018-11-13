@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class ENodeDialogueOptions : ENodeBase
@@ -9,27 +11,29 @@ public class ENodeDialogueOptions : ENodeBase
     public ConnectionPoint outPoint02;
 
     //Visuals
-    public float OptionBoxHight = 60;
-    public float OptionButtonHight = 20;
+    [XmlIgnore] public float OptionBoxHight = 60;
+    [XmlIgnore] public float OptionButtonHight = 20;
 
     public string OptionText01;
     public string OptionText02;
     public string OptionText03;
 
-    Rect OptionBox01Rect;
-    Rect OptionText01Rect;
-    Rect OptionBox02Rect;
-    Rect OptionText02Rect;
-    Rect OptionBox03Rect;
-    Rect OptionText03Rect;
+    public Rect OptionBox01Rect;
+    public Rect OptionText01Rect;
+    public Rect OptionBox02Rect;
+    public Rect OptionText02Rect;
+    public Rect OptionBox03Rect;
+    public Rect OptionText03Rect;
 
     //options buttons
     public Rect AddOptionRect;
     public Rect EraseOptionRect;
-    System.Action<ConnectionPoint> eraseConnection;
+    [XmlIgnore] public System.Action<ConnectionPoint> eraseConnection;
 
-    int options = 1;
+    public int options = 1;
 
+    //Constructor
+    public ENodeDialogueOptions () { }
     public ENodeDialogueOptions
         (
         Vector2 position,
@@ -44,7 +48,7 @@ public class ENodeDialogueOptions : ENodeBase
 
         //Node size + style
         rect = new Rect(position.x, position.y, NodeWidth, NodeHight);
-        
+
         #region Node Actions
 
         //Create conneciton points
@@ -52,6 +56,39 @@ public class ENodeDialogueOptions : ENodeBase
         outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         outPoint01 = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         outPoint02 = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
+
+        //Remove node function
+        OnRemoveNode = OnClickRemoveNode;
+        eraseConnection = RemoveConnection;
+
+        #endregion
+    }
+    public ENodeDialogueOptions
+        (
+        Vector2 position,
+        GUIStyle inPointStyle,
+        GUIStyle outPointStyle,
+        System.Action<ConnectionPoint> OnClickInPoint,
+        System.Action<ConnectionPoint> OnClickOutPoint,
+        System.Action<ENodeBase> OnClickRemoveNode,
+        System.Action<ConnectionPoint> RemoveConnection,
+        string inPointID,
+        string outPointID,
+        string outPoint01ID,
+        string outPoint02ID
+        )
+    {
+
+        //Node size + style
+        rect = new Rect(position.x, position.y, NodeWidth, NodeHight);
+
+        #region Node Actions
+
+        //Create conneciton points
+        inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint, inPointID);
+        outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, outPointID);
+        outPoint01 = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, outPoint01ID);
+        outPoint02 = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, outPoint02ID);
 
         //Remove node function
         OnRemoveNode = OnClickRemoveNode;

@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEditor;
 
@@ -7,31 +9,30 @@ public abstract class ENodeBase
 {
 
     //DialogueTree nodes
-    public string DialogueText;
-
+    [XmlIgnore] public string DialogueText;
 
     //Visuals
     public Rect rect;
-    public string Title = "Base Node";
+    [XmlIgnore] public string Title = "Base Node";
 
-    public float NodeWidth = 200;
+    [XmlIgnore] public float NodeWidth = 200;
     public float NodeHight;
-    public float VerticalOffset = 10;
-    public float HorizontalOffset = 10;
-    public float BoxTitleOffset = 10;
+    [XmlIgnore] public float VerticalOffset = 10;
+    [XmlIgnore] public float HorizontalOffset = 10;
+    [XmlIgnore] public float BoxTitleOffset = 10;
 
-    public float TextAreaHeight = 100;
+    [XmlIgnore] public float TextAreaHeight = 100;
 
 
     //Player Input
-    public bool isDraggable;
+    [XmlIgnore] public bool isDraggable;
 
     //Connections
     public ConnectionPoint inPoint;
     public ConnectionPoint outPoint;
 
     //NodeActions
-    public System.Action<ENodeBase> OnRemoveNode;
+    [XmlIgnore] public System.Action<ENodeBase> OnRemoveNode;
 
     //GUI
     public virtual void OnGUI()
@@ -45,7 +46,6 @@ public abstract class ENodeBase
         DrawNodeHolder();
 
         DialogueText = GUI.TextArea(DialogueTextRect, DialogueText);
-
     }
 
     //Draw Node

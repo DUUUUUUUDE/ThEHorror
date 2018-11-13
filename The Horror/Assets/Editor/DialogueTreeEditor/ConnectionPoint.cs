@@ -1,31 +1,39 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public enum ConnectionPointType { In, Out }
 
 public class ConnectionPoint
 {
+
+    public string id;
+
     //IN/OUT connection
-    public ConnectionPointType Type;
+    [XmlIgnore] public ConnectionPointType Type;
 
     //Visuals
-    public Rect rect;
-    public GUIStyle Style;
-    
+    [XmlIgnore] public Rect rect;
+    [XmlIgnore] public GUIStyle Style;
+
     //Parent Node
-    public ENodeBase ParentNode;
+    [XmlIgnore] public ENodeBase ParentNode;
 
     //Point Action
-    public System.Action<ConnectionPoint> OnClickConnectionPoint;
+    [XmlIgnore] public Action<ConnectionPoint> OnClickConnectionPoint;
 
     //Constructor
+    public ConnectionPoint () { }
     public ConnectionPoint
         (
         ENodeBase node, 
         ConnectionPointType type, 
         GUIStyle style, 
-        System.Action <ConnectionPoint> onClickConnectionPoint
+        Action <ConnectionPoint> onClickConnectionPoint,
+        string id = null
         )
     {
         //connection type
@@ -40,6 +48,8 @@ public class ConnectionPoint
 
         //Point action
         OnClickConnectionPoint = onClickConnectionPoint;
+
+        this.id = id ?? Guid.NewGuid().ToString();
     }
 
     //Place connection point
