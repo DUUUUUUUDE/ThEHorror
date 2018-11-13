@@ -87,7 +87,15 @@ public class DialogueTreeEditor : EditorWindow
             Nodes = new List<ENodeBase>();
         }
 
-        Nodes.Add(new ENodeDialogueNormal(mousePosition, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+        Nodes.Add(new ENodeDialogueNormal
+            (
+            mousePosition, 
+            inPointStyle, 
+            outPointStyle, 
+            OnClickInPoint, 
+            OnClickOutPoint, 
+            OnClickRemoveNode
+            ));
     }
 
     private void OnClickAddOptionDialogueNode(Vector2 mousePosition)
@@ -97,7 +105,17 @@ public class DialogueTreeEditor : EditorWindow
             Nodes = new List<ENodeBase>();
         }
 
-        Nodes.Add(new ENodeDialogueOptions(mousePosition, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, RemoveOptionConnections));
+        Nodes.Add(
+            new ENodeDialogueOptions
+            (
+            mousePosition, 
+            inPointStyle, 
+            outPointStyle, 
+            OnClickInPoint,
+            OnClickOutPoint, 
+            OnClickRemoveNode, 
+            RemoveOptionConnections
+            ));
     }
 
     #region NODES
@@ -423,22 +441,38 @@ public class DialogueTreeEditor : EditorWindow
         Nodes = new List<ENodeBase>();
         connections = new List<Connection>();
 
-        foreach (var nodeDeserialized in nodesDeserialized)
+        foreach (var node in nodesDeserialized)
         {
-            /*
-            Nodes.Add(new ENodeDialogueOptions(
-                nodeDeserialized.rect.position,
-                inPointStyle,
-                outPointStyle,
-                OnClickInPoint,
-                OnClickOutPoint,
-                OnClickRemoveNode,
-                nodeDeserialized.inPoint.id,
-                nodeDeserialized.outPoint.id
-                )
-
-            );
-            */
+            if (node is ENodeDialogueOptions)
+            {
+                Nodes.Add(new ENodeDialogueOptions(
+                    node.rect.position,
+                    inPointStyle,
+                    outPointStyle,
+                    OnClickInPoint,
+                    OnClickOutPoint,
+                    OnClickRemoveNode,
+                    RemoveOptionConnections,
+                    node.inPoint.id,
+                    node.outPoint.id,
+                    ((ENodeDialogueOptions)node).outPoint01.id,
+                    ((ENodeDialogueOptions)node).outPoint02.id
+                    )
+                );
+            }else if (node is ENodeDialogueNormal)
+            {
+                Nodes.Add(new ENodeDialogueNormal(
+                    node.rect.position,
+                    inPointStyle,
+                    outPointStyle,
+                    OnClickInPoint,
+                    OnClickOutPoint,
+                    OnClickRemoveNode,
+                    node.inPoint.id,
+                    node.outPoint.id
+                    )
+                );
+            }
         }
 
         foreach (var connectionDeserialized in connectionsDeserialized)

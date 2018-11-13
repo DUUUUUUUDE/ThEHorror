@@ -5,11 +5,13 @@ using System.Xml.Serialization;
 using UnityEngine;
 using UnityEditor;
 
+[XmlInclude(typeof(ENodeDialogueNormal))]
+[XmlInclude(typeof(ENodeDialogueOptions))]
 public abstract class ENodeBase
 {
 
     //DialogueTree nodes
-    [XmlIgnore] public string DialogueText;
+    public string DialogueText;
 
     //Visuals
     public Rect rect;

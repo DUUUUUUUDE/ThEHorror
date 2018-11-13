@@ -62079,22 +62079,22 @@ Prefab:
     - target: {fileID: 224076482944464892, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 136.50002
       objectReference: {fileID: 0}
     - target: {fileID: 224758853566124932, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 224751947956184224, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 224668797860501648, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 224758853566124932, guid: 47d36a0e20c6a844b933a63572b184dc,
         type: 2}
