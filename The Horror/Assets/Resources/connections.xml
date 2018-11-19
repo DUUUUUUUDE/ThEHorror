@@ -2,26 +2,34 @@
 <ArrayOfConnection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Connection>
     <inPoint>
-      <id>91bfbad5-99fd-4371-9885-8f08387fb43a</id>
+      <id>72bedc1e-ac5d-4dea-9542-53d33b57cd5d</id>
     </inPoint>
     <outPoint>
-      <id>883f5bd5-04b5-46d3-a70d-99d14c6a8a6e</id>
+      <id>1c747f75-75ce-40dc-82a3-b75dd4706aed</id>
     </outPoint>
   </Connection>
   <Connection>
     <inPoint>
-      <id>8bae368e-2950-4ebe-971f-24cfd69742db</id>
+      <id>1cc2494b-2d13-4898-b5a0-a8f0f48dbc6c</id>
     </inPoint>
     <outPoint>
-      <id>ac435ad7-01ec-4b25-9fc1-13accd590c6e</id>
+      <id>46681f69-06ae-4abc-b687-bb9eaf61368a</id>
     </outPoint>
   </Connection>
   <Connection>
     <inPoint>
-      <id>fffba862-b9e5-43cd-939d-30debb37334c</id>
+      <id>239b33d7-15a2-40af-8398-9e2009a3e04c</id>
     </inPoint>
     <outPoint>
-      <id>0eb697cd-5731-4874-a4d5-926c2d186d6a</id>
+      <id>c252fa9d-debf-4ca5-974f-52029f902721</id>
+    </outPoint>
+  </Connection>
+  <Connection>
+    <inPoint>
+      <id>239b33d7-15a2-40af-8398-9e2009a3e04c</id>
+    </inPoint>
+    <outPoint>
+      <id>c468722e-16d0-4ffa-b20a-3cbc01b86317</id>
     </outPoint>
   </Connection>
 </ArrayOfConnection>

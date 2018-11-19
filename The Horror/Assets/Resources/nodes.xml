@@ -1,63 +1,24 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ArrayOfENodeBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ENodeBase xsi:type="ENodeDialogueNormal">
-    <rect>
-      <x>-1</x>
-      <y>99</y>
-      <position>
-        <x>-1</x>
-        <y>99</y>
-      </position>
-      <center>
-        <x>99</x>
-        <y>169</y>
-      </center>
-      <min>
-        <x>-1</x>
-        <y>99</y>
-      </min>
-      <max>
-        <x>199</x>
-        <y>239</y>
-      </max>
-      <width>200</width>
-      <height>140</height>
-      <size>
-        <x>200</x>
-        <y>140</y>
-      </size>
-      <xMin>-1</xMin>
-      <yMin>99</yMin>
-      <xMax>199</xMax>
-      <yMax>239</yMax>
-    </rect>
-    <NodeHight>140</NodeHight>
-    <inPoint>
-      <id>a7846edc-d20d-4726-aff5-973e0abc2885</id>
-    </inPoint>
-    <outPoint>
-      <id>883f5bd5-04b5-46d3-a70d-99d14c6a8a6e</id>
-    </outPoint>
-  </ENodeBase>
   <ENodeBase xsi:type="ENodeDialogueOptions">
     <rect>
-      <x>301</x>
-      <y>101</y>
+      <x>142</x>
+      <y>138</y>
       <position>
-        <x>301</x>
-        <y>101</y>
+        <x>142</x>
+        <y>138</y>
       </position>
       <center>
-        <x>401</x>
-        <y>301</y>
+        <x>242</x>
+        <y>338</y>
       </center>
       <min>
-        <x>301</x>
-        <y>101</y>
+        <x>142</x>
+        <y>138</y>
       </min>
       <max>
-        <x>501</x>
-        <y>501</y>
+        <x>342</x>
+        <y>538</y>
       </max>
       <width>200</width>
       <height>400</height>
@@ -65,42 +26,42 @@
         <x>200</x>
         <y>400</y>
       </size>
-      <xMin>301</xMin>
-      <yMin>101</yMin>
-      <xMax>501</xMax>
-      <yMax>501</yMax>
+      <xMin>142</xMin>
+      <yMin>138</yMin>
+      <xMax>342</xMax>
+      <yMax>538</yMax>
     </rect>
     <NodeHight>400</NodeHight>
     <inPoint>
-      <id>91bfbad5-99fd-4371-9885-8f08387fb43a</id>
+      <id>a5c55658-8f80-490b-bf5f-65ae9364edd3</id>
     </inPoint>
     <outPoint>
-      <id>ac435ad7-01ec-4b25-9fc1-13accd590c6e</id>
+      <id>5f039f55-5888-4b63-86b8-f22d96168cbf</id>
     </outPoint>
     <outPoint01>
-      <id>0eb697cd-5731-4874-a4d5-926c2d186d6a</id>
+      <id>f7efe901-cfc7-43c0-98c2-1785c2a6e091</id>
     </outPoint01>
     <outPoint02>
-      <id>a0e6de25-261e-4048-837f-5cb1c038df47</id>
+      <id>c2898287-3c6d-445d-9d85-721fe02b9358</id>
     </outPoint02>
     <OptionBox01Rect>
-      <x>311</x>
-      <y>291</y>
+      <x>152</x>
+      <y>328</y>
       <position>
-        <x>311</x>
-        <y>291</y>
+        <x>152</x>
+        <y>328</y>
       </position>
       <center>
-        <x>401</x>
-        <y>321</y>
+        <x>242</x>
+        <y>358</y>
       </center>
       <min>
-        <x>311</x>
-        <y>291</y>
+        <x>152</x>
+        <y>328</y>
       </min>
       <max>
-        <x>491</x>
-        <y>351</y>
+        <x>332</x>
+        <y>388</y>
       </max>
       <width>180</width>
       <height>60</height>
@@ -108,29 +69,29 @@
         <x>180</x>
         <y>60</y>
       </size>
-      <xMin>311</xMin>
-      <yMin>291</yMin>
-      <xMax>491</xMax>
-      <yMax>351</yMax>
+      <xMin>152</xMin>
+      <yMin>328</yMin>
+      <xMax>332</xMax>
+      <yMax>388</yMax>
     </OptionBox01Rect>
     <OptionText01Rect>
-      <x>321</x>
-      <y>311</y>
+      <x>162</x>
+      <y>348</y>
       <position>
-        <x>321</x>
-        <y>311</y>
+        <x>162</x>
+        <y>348</y>
       </position>
       <center>
-        <x>401</x>
-        <y>326</y>
+        <x>242</x>
+        <y>363</y>
       </center>
       <min>
-        <x>321</x>
-        <y>311</y>
+        <x>162</x>
+        <y>348</y>
       </min>
       <max>
-        <x>481</x>
-        <y>341</y>
+        <x>322</x>
+        <y>378</y>
       </max>
       <width>160</width>
       <height>30</height>
@@ -138,29 +99,29 @@
         <x>160</x>
         <y>30</y>
       </size>
-      <xMin>321</xMin>
-      <yMin>311</yMin>
-      <xMax>481</xMax>
-      <yMax>341</yMax>
+      <xMin>162</xMin>
+      <yMin>348</yMin>
+      <xMax>322</xMax>
+      <yMax>378</yMax>
     </OptionText01Rect>
     <OptionBox02Rect>
-      <x>311</x>
-      <y>361</y>
+      <x>152</x>
+      <y>398</y>
       <position>
-        <x>311</x>
-        <y>361</y>
+        <x>152</x>
+        <y>398</y>
       </position>
       <center>
-        <x>401</x>
-        <y>391</y>
+        <x>242</x>
+        <y>428</y>
       </center>
       <min>
-        <x>311</x>
-        <y>361</y>
+        <x>152</x>
+        <y>398</y>
       </min>
       <max>
-        <x>491</x>
-        <y>421</y>
+        <x>332</x>
+        <y>458</y>
       </max>
       <width>180</width>
       <height>60</height>
@@ -168,29 +129,29 @@
         <x>180</x>
         <y>60</y>
       </size>
-      <xMin>311</xMin>
-      <yMin>361</yMin>
-      <xMax>491</xMax>
-      <yMax>421</yMax>
+      <xMin>152</xMin>
+      <yMin>398</yMin>
+      <xMax>332</xMax>
+      <yMax>458</yMax>
     </OptionBox02Rect>
     <OptionText02Rect>
-      <x>321</x>
-      <y>381</y>
+      <x>162</x>
+      <y>418</y>
       <position>
-        <x>321</x>
-        <y>381</y>
+        <x>162</x>
+        <y>418</y>
       </position>
       <center>
-        <x>401</x>
-        <y>396</y>
+        <x>242</x>
+        <y>433</y>
       </center>
       <min>
-        <x>321</x>
-        <y>381</y>
+        <x>162</x>
+        <y>418</y>
       </min>
       <max>
-        <x>481</x>
-        <y>411</y>
+        <x>322</x>
+        <y>448</y>
       </max>
       <width>160</width>
       <height>30</height>
@@ -198,29 +159,29 @@
         <x>160</x>
         <y>30</y>
       </size>
-      <xMin>321</xMin>
-      <yMin>381</yMin>
-      <xMax>481</xMax>
-      <yMax>411</yMax>
+      <xMin>162</xMin>
+      <yMin>418</yMin>
+      <xMax>322</xMax>
+      <yMax>448</yMax>
     </OptionText02Rect>
     <OptionBox03Rect>
-      <x>311</x>
-      <y>431</y>
+      <x>152</x>
+      <y>468</y>
       <position>
-        <x>311</x>
-        <y>431</y>
+        <x>152</x>
+        <y>468</y>
       </position>
       <center>
-        <x>401</x>
-        <y>461</y>
+        <x>242</x>
+        <y>498</y>
       </center>
       <min>
-        <x>311</x>
-        <y>431</y>
+        <x>152</x>
+        <y>468</y>
       </min>
       <max>
-        <x>491</x>
-        <y>491</y>
+        <x>332</x>
+        <y>528</y>
       </max>
       <width>180</width>
       <height>60</height>
@@ -228,29 +189,29 @@
         <x>180</x>
         <y>60</y>
       </size>
-      <xMin>311</xMin>
-      <yMin>431</yMin>
-      <xMax>491</xMax>
-      <yMax>491</yMax>
+      <xMin>152</xMin>
+      <yMin>468</yMin>
+      <xMax>332</xMax>
+      <yMax>528</yMax>
     </OptionBox03Rect>
     <OptionText03Rect>
-      <x>321</x>
-      <y>451</y>
+      <x>162</x>
+      <y>488</y>
       <position>
-        <x>321</x>
-        <y>451</y>
+        <x>162</x>
+        <y>488</y>
       </position>
       <center>
-        <x>401</x>
-        <y>466</y>
+        <x>242</x>
+        <y>503</y>
       </center>
       <min>
-        <x>321</x>
-        <y>451</y>
+        <x>162</x>
+        <y>488</y>
       </min>
       <max>
-        <x>481</x>
-        <y>481</y>
+        <x>322</x>
+        <y>518</y>
       </max>
       <width>160</width>
       <height>30</height>
@@ -258,29 +219,29 @@
         <x>160</x>
         <y>30</y>
       </size>
-      <xMin>321</xMin>
-      <yMin>451</yMin>
-      <xMax>481</xMax>
-      <yMax>481</yMax>
+      <xMin>162</xMin>
+      <yMin>488</yMin>
+      <xMax>322</xMax>
+      <yMax>518</yMax>
     </OptionText03Rect>
     <AddOptionRect>
-      <x>311</x>
-      <y>241</y>
+      <x>152</x>
+      <y>278</y>
       <position>
-        <x>311</x>
-        <y>241</y>
+        <x>152</x>
+        <y>278</y>
       </position>
       <center>
-        <x>401</x>
-        <y>251</y>
+        <x>242</x>
+        <y>288</y>
       </center>
       <min>
-        <x>311</x>
-        <y>241</y>
+        <x>152</x>
+        <y>278</y>
       </min>
       <max>
-        <x>491</x>
-        <y>261</y>
+        <x>332</x>
+        <y>298</y>
       </max>
       <width>180</width>
       <height>20</height>
@@ -288,28 +249,284 @@
         <x>180</x>
         <y>20</y>
       </size>
-      <xMin>311</xMin>
-      <yMin>241</yMin>
-      <xMax>491</xMax>
-      <yMax>261</yMax>
+      <xMin>152</xMin>
+      <yMin>278</yMin>
+      <xMax>332</xMax>
+      <yMax>298</yMax>
     </AddOptionRect>
     <EraseOptionRect>
-      <x>311</x>
+      <x>152</x>
+      <y>303</y>
+      <position>
+        <x>152</x>
+        <y>303</y>
+      </position>
+      <center>
+        <x>242</x>
+        <y>313</y>
+      </center>
+      <min>
+        <x>152</x>
+        <y>303</y>
+      </min>
+      <max>
+        <x>332</x>
+        <y>323</y>
+      </max>
+      <width>180</width>
+      <height>20</height>
+      <size>
+        <x>180</x>
+        <y>20</y>
+      </size>
+      <xMin>152</xMin>
+      <yMin>303</yMin>
+      <xMax>332</xMax>
+      <yMax>323</yMax>
+    </EraseOptionRect>
+    <options>3</options>
+  </ENodeBase>
+  <ENodeBase xsi:type="ENodeDialogueOptions">
+    <rect>
+      <x>568</x>
+      <y>126</y>
+      <position>
+        <x>568</x>
+        <y>126</y>
+      </position>
+      <center>
+        <x>668</x>
+        <y>326</y>
+      </center>
+      <min>
+        <x>568</x>
+        <y>126</y>
+      </min>
+      <max>
+        <x>768</x>
+        <y>526</y>
+      </max>
+      <width>200</width>
+      <height>400</height>
+      <size>
+        <x>200</x>
+        <y>400</y>
+      </size>
+      <xMin>568</xMin>
+      <yMin>126</yMin>
+      <xMax>768</xMax>
+      <yMax>526</yMax>
+    </rect>
+    <NodeHight>400</NodeHight>
+    <inPoint>
+      <id>4f2b2d2c-2b49-423f-a30e-349a209230c5</id>
+    </inPoint>
+    <outPoint>
+      <id>695dd46b-9f4d-487a-85f2-5f889fa27556</id>
+    </outPoint>
+    <outPoint01>
+      <id>ad2b69f1-8b6e-4a42-8986-86eeed2fd269</id>
+    </outPoint01>
+    <outPoint02>
+      <id>10c1f46c-8e19-4a7e-b844-f05654d65c56</id>
+    </outPoint02>
+    <OptionBox01Rect>
+      <x>578</x>
+      <y>316</y>
+      <position>
+        <x>578</x>
+        <y>316</y>
+      </position>
+      <center>
+        <x>668</x>
+        <y>346</y>
+      </center>
+      <min>
+        <x>578</x>
+        <y>316</y>
+      </min>
+      <max>
+        <x>758</x>
+        <y>376</y>
+      </max>
+      <width>180</width>
+      <height>60</height>
+      <size>
+        <x>180</x>
+        <y>60</y>
+      </size>
+      <xMin>578</xMin>
+      <yMin>316</yMin>
+      <xMax>758</xMax>
+      <yMax>376</yMax>
+    </OptionBox01Rect>
+    <OptionText01Rect>
+      <x>588</x>
+      <y>336</y>
+      <position>
+        <x>588</x>
+        <y>336</y>
+      </position>
+      <center>
+        <x>668</x>
+        <y>351</y>
+      </center>
+      <min>
+        <x>588</x>
+        <y>336</y>
+      </min>
+      <max>
+        <x>748</x>
+        <y>366</y>
+      </max>
+      <width>160</width>
+      <height>30</height>
+      <size>
+        <x>160</x>
+        <y>30</y>
+      </size>
+      <xMin>588</xMin>
+      <yMin>336</yMin>
+      <xMax>748</xMax>
+      <yMax>366</yMax>
+    </OptionText01Rect>
+    <OptionBox02Rect>
+      <x>578</x>
+      <y>386</y>
+      <position>
+        <x>578</x>
+        <y>386</y>
+      </position>
+      <center>
+        <x>668</x>
+        <y>416</y>
+      </center>
+      <min>
+        <x>578</x>
+        <y>386</y>
+      </min>
+      <max>
+        <x>758</x>
+        <y>446</y>
+      </max>
+      <width>180</width>
+      <height>60</height>
+      <size>
+        <x>180</x>
+        <y>60</y>
+      </size>
+      <xMin>578</xMin>
+      <yMin>386</yMin>
+      <xMax>758</xMax>
+      <yMax>446</yMax>
+    </OptionBox02Rect>
+    <OptionText02Rect>
+      <x>588</x>
+      <y>406</y>
+      <position>
+        <x>588</x>
+        <y>406</y>
+      </position>
+      <center>
+        <x>668</x>
+        <y>421</y>
+      </center>
+      <min>
+        <x>588</x>
+        <y>406</y>
+      </min>
+      <max>
+        <x>748</x>
+        <y>436</y>
+      </max>
+      <width>160</width>
+      <height>30</height>
+      <size>
+        <x>160</x>
+        <y>30</y>
+      </size>
+      <xMin>588</xMin>
+      <yMin>406</yMin>
+      <xMax>748</xMax>
+      <yMax>436</yMax>
+    </OptionText02Rect>
+    <OptionBox03Rect>
+      <x>578</x>
+      <y>456</y>
+      <position>
+        <x>578</x>
+        <y>456</y>
+      </position>
+      <center>
+        <x>668</x>
+        <y>486</y>
+      </center>
+      <min>
+        <x>578</x>
+        <y>456</y>
+      </min>
+      <max>
+        <x>758</x>
+        <y>516</y>
+      </max>
+      <width>180</width>
+      <height>60</height>
+      <size>
+        <x>180</x>
+        <y>60</y>
+      </size>
+      <xMin>578</xMin>
+      <yMin>456</yMin>
+      <xMax>758</xMax>
+      <yMax>516</yMax>
+    </OptionBox03Rect>
+    <OptionText03Rect>
+      <x>588</x>
+      <y>476</y>
+      <position>
+        <x>588</x>
+        <y>476</y>
+      </position>
+      <center>
+        <x>668</x>
+        <y>491</y>
+      </center>
+      <min>
+        <x>588</x>
+        <y>476</y>
+      </min>
+      <max>
+        <x>748</x>
+        <y>506</y>
+      </max>
+      <width>160</width>
+      <height>30</height>
+      <size>
+        <x>160</x>
+        <y>30</y>
+      </size>
+      <xMin>588</xMin>
+      <yMin>476</yMin>
+      <xMax>748</xMax>
+      <yMax>506</yMax>
+    </OptionText03Rect>
+    <AddOptionRect>
+      <x>578</x>
       <y>266</y>
       <position>
-        <x>311</x>
+        <x>578</x>
         <y>266</y>
       </position>
       <center>
-        <x>401</x>
+        <x>668</x>
         <y>276</y>
       </center>
       <min>
-        <x>311</x>
+        <x>578</x>
         <y>266</y>
       </min>
       <max>
-        <x>491</x>
+        <x>758</x>
         <y>286</y>
       </max>
       <width>180</width>
@@ -318,89 +535,41 @@
         <x>180</x>
         <y>20</y>
       </size>
-      <xMin>311</xMin>
+      <xMin>578</xMin>
       <yMin>266</yMin>
-      <xMax>491</xMax>
+      <xMax>758</xMax>
       <yMax>286</yMax>
+    </AddOptionRect>
+    <EraseOptionRect>
+      <x>578</x>
+      <y>291</y>
+      <position>
+        <x>578</x>
+        <y>291</y>
+      </position>
+      <center>
+        <x>668</x>
+        <y>301</y>
+      </center>
+      <min>
+        <x>578</x>
+        <y>291</y>
+      </min>
+      <max>
+        <x>758</x>
+        <y>311</y>
+      </max>
+      <width>180</width>
+      <height>20</height>
+      <size>
+        <x>180</x>
+        <y>20</y>
+      </size>
+      <xMin>578</xMin>
+      <yMin>291</yMin>
+      <xMax>758</xMax>
+      <yMax>311</yMax>
     </EraseOptionRect>
     <options>3</options>
-  </ENodeBase>
-  <ENodeBase xsi:type="ENodeDialogueNormal">
-    <rect>
-      <x>628</x>
-      <y>104</y>
-      <position>
-        <x>628</x>
-        <y>104</y>
-      </position>
-      <center>
-        <x>728</x>
-        <y>174</y>
-      </center>
-      <min>
-        <x>628</x>
-        <y>104</y>
-      </min>
-      <max>
-        <x>828</x>
-        <y>244</y>
-      </max>
-      <width>200</width>
-      <height>140</height>
-      <size>
-        <x>200</x>
-        <y>140</y>
-      </size>
-      <xMin>628</xMin>
-      <yMin>104</yMin>
-      <xMax>828</xMax>
-      <yMax>244</yMax>
-    </rect>
-    <NodeHight>140</NodeHight>
-    <inPoint>
-      <id>8bae368e-2950-4ebe-971f-24cfd69742db</id>
-    </inPoint>
-    <outPoint>
-      <id>74a9987b-38d3-454a-8db9-d5d7c9057f3c</id>
-    </outPoint>
-  </ENodeBase>
-  <ENodeBase xsi:type="ENodeDialogueNormal">
-    <rect>
-      <x>628</x>
-      <y>252</y>
-      <position>
-        <x>628</x>
-        <y>252</y>
-      </position>
-      <center>
-        <x>728</x>
-        <y>322</y>
-      </center>
-      <min>
-        <x>628</x>
-        <y>252</y>
-      </min>
-      <max>
-        <x>828</x>
-        <y>392</y>
-      </max>
-      <width>200</width>
-      <height>140</height>
-      <size>
-        <x>200</x>
-        <y>140</y>
-      </size>
-      <xMin>628</xMin>
-      <yMin>252</yMin>
-      <xMax>828</xMax>
-      <yMax>392</yMax>
-    </rect>
-    <NodeHight>140</NodeHight>
-    <inPoint>
-      <id>fffba862-b9e5-43cd-939d-30debb37334c</id>
-    </inPoint>
-    <outPoint>
-      <id>37d8504a-f9bb-4e8c-bde0-105f47a04cae</id>
-    </outPoint>
   </ENodeBase>
 </ArrayOfENodeBase>

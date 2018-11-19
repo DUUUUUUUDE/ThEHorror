@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Interactables\Terminal\TerminalInteract.cs" />
     <Compile Include="Assets\Scripts\NPCs\ConversationManager.cs" />
     <Compile Include="Assets\Scripts\NPCs\DialogueTree.cs" />
+    <Compile Include="Assets\Scripts\Other\PoolCreator.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerGadgets.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInput.cs" />
