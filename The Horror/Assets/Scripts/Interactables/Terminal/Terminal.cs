@@ -126,7 +126,7 @@ public class Terminal : MonoBehaviour {
             inputField.ActivateInputField();
             inputField.text = null;
 
-            CameraPlayerPos = PlayerManager._Camera.transform.localPosition;
+            CameraPlayerPos = PlayerManager.Instace.CameraHolder.transform.localPosition;
 
             MovePlayerCameraCO = StartCoroutine(MoveCameraTerminal());
         }
@@ -157,15 +157,15 @@ public class Terminal : MonoBehaviour {
     {
         OnCoroutine = true;
 
-        while (PlayerManager._Camera.transform.position != CameraPoint.position)
+        while (PlayerManager.Instace.CameraHolder.position != CameraPoint.position)
         {
-            PlayerManager._Camera.transform.position = Vector3.MoveTowards(PlayerManager._Camera.transform.position, CameraPoint.position,5 * Time.deltaTime);
-            PlayerManager._Camera.transform.LookAt(transform.position);
+            PlayerManager.Instace.CameraHolder.position = Vector3.MoveTowards(PlayerManager.Instace.CameraHolder.position, CameraPoint.position,5 * Time.deltaTime);
+            PlayerManager.Instace.CameraHolder.LookAt(transform.position);
 
             yield return null;
         }
 
-        if (PlayerManager._Camera.transform.position == CameraPoint.position)
+        if (PlayerManager.Instace.CameraHolder.position == CameraPoint.position)
         {
             OnCoroutine = false;
         }
@@ -175,19 +175,19 @@ public class Terminal : MonoBehaviour {
     {
         OnCoroutine = true;
 
-        while (PlayerManager._Camera.transform.localPosition != CameraPlayerPos)
+        while (PlayerManager.Instace.CameraHolder.localPosition != CameraPlayerPos)
         {
-            PlayerManager._Camera.transform.localPosition = Vector3.MoveTowards(PlayerManager._Camera.transform.localPosition, CameraPlayerPos, 5 * Time.deltaTime);
-            PlayerManager._Camera.transform.LookAt(transform.position);
+            PlayerManager.Instace.CameraHolder.localPosition = Vector3.MoveTowards(PlayerManager.Instace.CameraHolder.localPosition, CameraPlayerPos, 5 * Time.deltaTime);
+            PlayerManager.Instace.CameraHolder.LookAt(transform.position);
 
 
             yield return null;
         }
 
-        if (PlayerManager._Camera.transform.localPosition == CameraPlayerPos)
+        if (PlayerManager.Instace.CameraHolder.localPosition == CameraPlayerPos)
         {
             OnCoroutine = false;
-            PlayerManager._Camera.transform.localRotation = Quaternion.identity;
+            PlayerManager.Instace.CameraHolder.localRotation = Quaternion.identity;
 
         }
     }

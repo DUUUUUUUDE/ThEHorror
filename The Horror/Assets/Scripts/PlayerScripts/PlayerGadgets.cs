@@ -38,10 +38,15 @@ public class PlayerGadgets : MonoBehaviour {
     public float GunDamageMin;
     public float GunDistance;
     public LayerMask GunLayer;
-
-    [Space(10)]
+    [Space(5)]
     public ParticleSystem GunChargeP;
     public ParticleSystem GunShootP;
+
+    public bool OnScaner;
+
+
+   
+
 
     //Shoot
     public void Shoot()
@@ -55,6 +60,25 @@ public class PlayerGadgets : MonoBehaviour {
         else
         {
             ShootDotScan();
+        }
+    }
+
+
+
+    //SCANER
+    public void ScanerOnOff()
+    {
+        if (OnScaner)
+        {
+            PlayerManager._CameraMovement.ScanOFF();
+            PlayerManager._UI.ScanOFF();
+            OnScaner = false;
+        }
+        else
+        {
+            PlayerManager._CameraMovement.ScanON();
+            PlayerManager._UI.ScanON();
+            OnScaner = true;
         }
     }
 
@@ -83,7 +107,7 @@ public class PlayerGadgets : MonoBehaviour {
     void GunShoot ()
     {
         RaycastHit hit = new RaycastHit();
-        Ray newRay = new Ray(PlayerManager._Camera.transform.position, PlayerManager._Camera.transform.forward);
+        Ray newRay = new Ray(PlayerManager.Instace.CameraHolder.position, PlayerManager.Instace.CameraHolder.forward);
 
         if (Physics.Raycast(newRay, out hit, GunDistance, GunLayer))
         {
@@ -214,8 +238,8 @@ public class PlayerGadgets : MonoBehaviour {
         RaycastHit hit = new RaycastHit();
         Ray newRay;
 
-        Vector3 CameraForward = PlayerManager._Camera.transform.forward;
-        Vector3 CameraPos = PlayerManager._Camera.transform.position;
+        Vector3 CameraForward = PlayerManager.Instace.CameraHolder.forward;
+        Vector3 CameraPos = PlayerManager.Instace.CameraHolder.position;
 
 
         for (int i = 0; i < DotCount; i++)

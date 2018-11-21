@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23195457456231990}
   - component: {fileID: 33428760549892344}
   - component: {fileID: 114692280915720486}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Icosphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4275292649372110}
   - component: {fileID: 111960985501384794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,10 +12,11 @@ public class PlayerManager : MonoBehaviour {
     [HideInInspector] public static PlayerUI          _UI { get; set; }
     [HideInInspector] public static PlayerCamera      _CameraMovement { get; set; }
     [HideInInspector] public static PlayerInteract    _Interact { get; set; }
-    [HideInInspector] public static Camera            _Camera { get; set; }
     #endregion
 
     public Transform GarbageCollector;
+    public Transform CameraHolder;
+
 
     [HideInInspector] public Spirit   CurrentSpirit;
     [HideInInspector] public Terminal CurrentTerminal;
@@ -43,10 +44,11 @@ public class PlayerManager : MonoBehaviour {
         _UI = FindObjectOfType<PlayerUI>();
         _CameraMovement = FindObjectOfType<PlayerCamera>();
         _Interact = FindObjectOfType<PlayerInteract>();
-        _Camera = Camera.main;
 
         FreeState();
     }
+
+    #region SPIRIT
 
     public void SetUpSpirit (Spirit spirit)
     {
@@ -58,6 +60,8 @@ public class PlayerManager : MonoBehaviour {
         CurrentSpirit = null;
         OnSpirit = false;
     }
+
+    #endregion
 
     #region STATES
 

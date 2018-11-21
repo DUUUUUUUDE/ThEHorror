@@ -11,13 +11,14 @@ public class PlayerInteract : MonoBehaviour {
 
     public void Interact ()
     {
-        if (CurrentInteractable) CurrentInteractable.OnInteract();
+        if (!PlayerManager._Gadgets.OnScaner)
+            if (CurrentInteractable) CurrentInteractable.OnInteract();
     }
 
     private void Update()
     {
         RaycastHit hit;
-        Ray newRay = new Ray(PlayerManager._Camera.transform.position, PlayerManager._Camera.transform.forward);
+        Ray newRay = new Ray(PlayerManager.Instace.CameraHolder.position, PlayerManager.Instace.CameraHolder.forward);
         if (Physics.Raycast(newRay, out hit, InteractDist, InteractLayer))
         {
             if (!CurrentInteractable)

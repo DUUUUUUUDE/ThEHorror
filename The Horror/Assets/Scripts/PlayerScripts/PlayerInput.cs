@@ -38,6 +38,12 @@ public class PlayerInput : MonoBehaviour {
     void FreeInput ()
     {
         #region GADGETS
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            PlayerManager._Gadgets.ScanerOnOff();
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             PlayerManager._Interact.Interact();
